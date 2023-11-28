@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tempo Tapper</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -85,6 +86,33 @@
         header h1 {
             margin: 0;
         }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #f0f8ff; /* AliceBlue */
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -96,21 +124,45 @@
         </nav>
     </header>
 
-    <div style=" display: grid; justify-content: center;">
-        <article>
-            <h2>First  Post</h2>
-            <time datetime="2023-01-01">January 1, 2023</time>
-            <p>content</p>
-        </article>
+    <main>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="Ramonito.jpg" alt="Team Member 1">
+                    <h2>Ramonito Copreros Jr.</h2>
+                    <p>Description</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="member2.jpg" alt="Team Member 2">
+                    <h2>Samuel Diaz</h2>
+                    <p>Description</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="member3.jpg" alt="Team Member 3">
+                    <h2>Nathan Kuruvilla</h2>
+                    <p>Description</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="member4.jpg" alt="Team Member 4">
+                    <h2>Farhan Nazeer</h2>
+                    <p>Description</p>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </main>
 
-        <article>
-            <h2>Second  Post</h2>
-            <time datetime="2023-02-01">February 1, 2023</time>
-            <p>content</p>
-        </article>
-
-        <!-- Add more articles as needed -->
-
-    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 400,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
 </body>
 </html>
