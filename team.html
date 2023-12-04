@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tempo Tapper</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <style>
         body {
@@ -11,18 +12,21 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #333; /* Light gray background color */
+            background-color: #080808; /* Light gray background color */
+            background-image: url('./background.jpg');
         }
 
         header {
-            background-color: #333;
+            background-color: black;
             color: white;
-            padding: 20px;
+            padding: 10px;
+            padding-top: 5px;
+            padding-left: 20px;
             text-align: center;
         }
 
         nav {
-            background-color: #333; /* Matching header color */
+            background-color: black; /* Matching header color */
             padding: 10px;
             text-align: center;
         }
@@ -41,27 +45,33 @@
         }
 
         article {
-            margin-bottom: 40px;
             padding: 20px;
+            padding-top: 0px;
             border-radius: 8px;
-            background-color: #f0f8ff; /* AliceBlue */
+            background-color: #1b1b1b; /* AliceBlue */
             box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
-            width: 75vw;
+            width: 65vw;
         }
 
         h2 {
-            color: #333;
+            color: #ffffffea;
             font-size: 24px;
             margin-bottom: 10px;
         }
 
         time {
-            color: #888;
+            color: #dfdfdfd5;
             font-size: 14px;
         }
 
         p {
-            color: #555;
+            color: #ffffffd7;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        li {
+            color: #ffffffd7;
             font-size: 16px;
             line-height: 1.5;
         }
@@ -87,13 +97,35 @@
             margin: 0;
         }
 
-        main {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #333;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+        .subheader {
+            background-color: #88dd9f;
+            height: 2px;
+            margin-bottom: 40px;
+        }
+
+        .glow-border {
+            display: inline-block;
+        }
+
+        .glow-border:hover {
+            box-shadow: 0 0 10px #ffffff; /* Add a box-shadow for the glowing effect */
+        }
+
+        hr {
+            border: none; /* Remove the default solid border */
+            border-top: 1px dashed #ffffff; /* Set a 1px dashed white border */
+            margin: 20px 0; /* Add some margin for spacing */
+            margin-left: 2px;
+            margin-right: 2px;
+            border-color: #88dd9f;
+        }
+
+        .center-img {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
         }
 
         .swiper-container {
@@ -104,25 +136,35 @@
         .swiper-slide {
             text-align: center;
             font-size: 18px;
-            background: #f0f8ff; /* AliceBlue */
+            background-color: #333;
             border-radius: 8px;
             overflow: hidden;
         }
 
-        img {
-            max-width: 100%;
+        main {
+            width: 800px;
+            height: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
+
     </style>
 </head>
 <body>
     <header>
-        <h1>Tempo Tapper</h1>
+        <h1> <i style="color: white; margin-right: 20px" class="fas fa-music"></i>Tempo Tapper</h1>
         <nav>
             <a href="index.html">Log</a>
             <a href="team.html">Team</a>
         </nav>
     </header>
+
+    <div class="subheader">
+
+    </div>
 
     <main>
         <div class="swiper-container">
@@ -130,22 +172,22 @@
                 <div class="swiper-slide">
                     <img src="Ramonito.jpg" alt="Team Member 1">
                     <h2>Ramonito Copreros Jr.</h2>
-                    <p>Description</p>
+                    <p>Hardware Lead</p>
                 </div>
                 <div class="swiper-slide">
-                    <img src="member2.jpg" alt="Team Member 2">
+                    <img src="sam.jpg" alt="Team Member 2">
                     <h2>Samuel Diaz</h2>
-                    <p>Description</p>
+                    <p>Hardware Lead</p>
                 </div>
                 <div class="swiper-slide">
-                    <img src="member3.jpg" alt="Team Member 3">
+                    <img src="nathan.jpg" alt="Team Member 3">
                     <h2>Nathan Kuruvilla</h2>
-                    <p>Description</p>
+                    <p>Software Lead</p>
                 </div>
                 <div class="swiper-slide">
-                    <img src="member4.jpg" alt="Team Member 4">
+                    <img src="farhan.jpg" alt="Team Member 4">
                     <h2>Farhan Nazeer</h2>
-                    <p>Description</p>
+                    <p>Software Lead</p>
                 </div>
             </div>
             <!-- Add Pagination -->
@@ -157,7 +199,7 @@
     <script>
         var swiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
-            spaceBetween: 400,
+            spaceBetween: 500,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
