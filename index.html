@@ -272,9 +272,14 @@
                 <img src="./analysis.png" alt="">
             </div>
 
-            <p>Another important aspect to consider was how we were transferring the data from the device to the application. And to do that we will be using a node.js server to read data that is written to the serial port by the arduino. The node.js server will then communicate with the Front-end of our application through a websocket so that it can be displayed for the user. We will be using NPM packages like "serialport" and "socket.io" to make this communication simple and seemless.</p>
-            <p>There are a few algorithms that the app will implement for easier calculation of performance. The first algorithm merges overlapping intervals. This algorithm takes two arrays of intervals and merges them into one array of intervals where there is overlap between the two input arrays. The second algorithm that will be used is a cross-correlation algorithm. This algorithm shifts the user’s played intervals left and right to see where the most overlap is between what the user played and the expected song. </p>
+            <p>Another important aspect of this week that was considered was how we were transferring the data from the device to the application. And to do that we will be using a node.js server to read data that is written to the serial port by the arduino. The node.js server will then communicate with the Front-end of our application through a websocket so that it can be displayed for the user. We will be using NPM packages like "serialport" and "socket.io" to make this communication simple and seemless.</p>
             
+            <p>Towards the latter part of this week, algorithm analysis and design was conducted. There are a few algorithms that the app will implement for easier calculation of performance. The first algorithm merges overlapping intervals. This algorithm takes two arrays of intervals and merges them into one array of intervals where there is overlap between the two input arrays. The second algorithm that will be used is a cross-correlation algorithm. This algorithm shifts the user’s played intervals left and right to see where the most overlap is between what the user played and the expected song. </p>
+            
+            <div class="center-img">
+                <img style="width: 50%" src="./cross_correlation.png" alt="">
+            </div>
+
         </article>
 
         <hr>
