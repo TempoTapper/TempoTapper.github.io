@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo Tapper</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #080808; /* Light gray background color */
+            background-image: url('./background.jpg');
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            padding-top: 5px;
+            padding-left: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: black; /* Matching header color */
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: lightgrey;
+        }
+
+        article {
+            padding: 20px;
+            padding-top: 0px;
+            border-radius: 8px;
+            background-color: #1b1b1b; /* AliceBlue */
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+            width: 65vw;
+        }
+
+        h2 {
+            color: #ffffffea;
+            font-size: 24px;
+            margin-bottom: 0px;
+        }
+
+        time {
+            color: #dfdfdfd5;
+            font-size: 14px;
+        }
+
+        p {
+            color: #ffffffd7;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        li {
+            color: #ffffffd7;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        a {
+            color: lightgray;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: black;
+        }
+
+        /* Added Flexbox styles for header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .subheader {
+            background-color: #8431bb;
+            height: 2px;
+            margin-bottom: 40px;
+        }
+
+        .glow-border {
+            display: inline-block;
+        }
+
+        .glow-border:hover {
+            box-shadow: 0 0 10px #ffffff; /* Add a box-shadow for the glowing effect */
+        }
+
+        hr {
+            border: none; /* Remove the default solid border */
+            border-top: 1px dashed #ffffff; /* Set a 1px dashed white border */
+            margin: 20px 0; /* Add some margin for spacing */
+            margin-left: 2px;
+            margin-right: 2px;
+            border-color: #8431bb;
+        }
+
+        .center-img {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+             text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1> <i style="color: white; margin-right: 20px" class="fas fa-music"></i>Tempo Tapper</h1>
+        <nav>
+            <a href="index.html">Build Blog</a>
+            <a href="log.html">Design Log</a>
+            <a href="team.html">Team</a>
+        </nav>
+    </header>
+
+    <div class="subheader">
+
+    </div>
+
+    <div style=" display: grid; justify-content: center;">
+        <!-- <article class="glow-border">
+            <h2>Week 14: Part Sourcing</h2>
+            <i style="color: white; margin-right: 5px" class="fas fa-calendar"></i>
+            <time datetime="2023-09-11">Dec 11-17, 2023</time>
+            <p>This week our team worked on tracking down and ordering parts</p>
+        </article>
+
+        <hr>
+
+        <article class="glow-border">
+            <h2>Week 13: Budgeting</h2>
+            <i style="color: white; margin-right: 5px" class="fas fa-calendar"></i>
+            <time datetime="2023-09-11">Dec 4-10, 2023</time>
+            <p>This week our team focused on budgeting...</p>
+        </article> 
+
+        <hr> -->
+
+        <article class="glow-border">
+            <h2>Week 12: Final Report</h2>
+            <i style="color: white; margin-right: 5px" class="fas fa-calendar"></i>
+            <time datetime="2023-09-11">Nov 27-Dec 3, 2023</time>
+            <p>This week our team worked on writing out the final report.
+                The last deliverable of the term and also the most detailed, this report took about a fair bit of time.
+                Splitting up the sections based on our areas of expertise felt like the best way to work on this report as a team but still being able to make headway individually.
+                Ramonito and Samuel wrote the hardware sections while Farhan and Nathan wrote the sections on software and then everyone just proof read the opposites section.
+                The report consisted on all the same sections at the Final Design Presentation, except with quite a lot more detail, diving much deeper into the specifics than we had time to do in the presentation.
+                The report is just about finished now, we are just proof reading and making sure all the formatting look great before we submit it.
+            </p>
+        </article>
+
+        <hr>
+
+        <article class="glow-border">
+            <h2>Week 11: Final Design Presentation</h2>
+            <i style="color: white; margin-right: 5px" class="fas fa-calendar"></i>
+            <time datetime="2023-09-11">Nov 20-26, 2023</time>
+            <p>This week our team worked on our second formal presentation of the term the final design presentation.
+                The FDP was much more in depth than our PDP and therefore we had to spend a little bit more time on this one.
+
+                We started by restating all the important factors from our first presentation such as problem statement, specifications, and constraints.
+                The bulk of this presentation was talking about our detailed design for our selected design.
+                From a hardware perspective we discussed sensor selection, circuitry design, mechanical design and showed some pictures of our CAD.
+                For software we presented our page designs, talked about the various algorithms we were planning on using and about how we were doing communication between the device and application.
+            </p>
+        </article>
+
+        <hr>
+
+        <article class="glow-border">
+            <h2>Week 10: Modeling</h2>
+            <i style="color: white; margin-right: 5px" class="fas fa-calendar"></i>
+            <time datetime="2023-09-11">Nov 13-19, 2023</time>
+            <p>The CAD modelling required for the project's final design was done this week. An image of the finger sleeves is shown below: </p>
+
+            <div class="center-img">
+                <img style="width: 35%; margin-bottom: 10px;" src="./fs_dark.png" alt="">
+            </div>
+            <div class="center-img">
+                <img style="width: 35%" src="./fs_light.png" alt="">
+            </div>
+
+            <p>An image of the connector is shown below: </p>
+
+            <div class="center-img">
+                <img style="width: 60%" src="./connector_drawing.png" alt="">
+            </div>
+                
+            <p>An image of the wrist mount is shown below:</p>
+
+            <div class="center-img">
+                <img style="width: 30%" src="./mc_solidworks.png" alt="">
+            </div>
+        </article>
+
+        <hr>
+
+        <article class="glow-border">
+            <h2>Week 9: Detailed Design</h2>
+            <i style="color: white; margin-right: 5px" class="fas fa-calendar"></i>
+            <time datetime="2023-09-11">Nov 6-12, 2023</time>
+            <p>During this week, sketching was done to figure out how we would arrange these different components and anything we might have missed during the earlier process. To summarize, the product was 
+                decided to be split into three components: the finger sleeves, connectors, and wrist mount. The connectors were added during this phase to ensure that the device was modular and easy to assemble 
+                or disassemble.</p>
+
+                <div class="center-img">
+                    <img style="width: 80%" src="./onenote_sketch.png" alt="">
+                </div>
+        </article>
+
+        <hr>
+
+        <article class="glow-border">
+            <h2>Week 8: Software Architecture</h2>
+            <i style="color: white; margin-right: 5px" class="fas fa-calendar"></i>
+            <time datetime="2023-09-11">Oct 30-Nov 5, 2023</time>
+            <p>Our team focused on software architecture this week.</p>
+
+            <p>We picked our software tech stack after careful evaluation, and this is summarized in the tables below:</p>
+
+            <div class="center-img">
+                <img src="./language_matrix.png" alt="">
+            </div>
+
+            <p>We then started coming up with the flowchart for the application flow, and the final flowchart is shown below:</p>
+
+            
+            <div class="center-img">
+                <img src="./flow_chart.png" alt="">
+            </div>
+
+            <p>We also created some preliminary designs for our various application pages shown below:</p>
+            <div class="center-img" style="margin-bottom: 10px;">
+                <img src="./loginportal.png" alt="">
+            </div>
+            <div class="center-img" style="margin-bottom: 10px;">
+                <img src="./homepage.png" alt="">
+            </div>
+            <div class="center-img" style="margin-bottom: 10px;">
+                <img src="./songselect.png" alt="">
+            </div>
+            <div class="center-img" style="margin-bottom: 10px;">
+                <img src="./analysis.png" alt="">
+            </div>
+
+            <p>Another important aspect of this week that was considered was how we were transferring the data from the device to the application. And to do that we will be using a node.js server to read data that is written to the serial port by the arduino. The node.js server will then communicate with the Front-end of our application through a websocket so that it can be displayed for the user. We will be using NPM packages like "serialport" and "socket.io" to make this communication simple and seemless.</p>
+            
+            <p>Towards the latter part of this week, algorithm analysis and design was conducted. There are a few algorithms that the app will implement for easier calculation of performance. The first algorithm merges overlapping intervals. This algorithm takes two arrays of intervals and merges them into one array of intervals where there is overlap between the two input arrays. The second algorithm that will be used is a cross-correlation algorithm. This algorithm shifts the user’s played intervals left and right to see where the most overlap is between what the user played and the expected song. </p>
+            
+            <div class="center-img">
+                <img style="width: 50%" src="./cross_correlation.png" alt="">
+            </div>
+
+        </article>
+
+        <hr>
+
+        <article class="glow-border">
+            <h2>Week 7: Detailed Design</h2>
+            <i style="color: white; margin-right: 5px" class="fas fa-calendar"></i>
+            <time datetime="2023-09-11">Oct 23-29, 2023</time>
+            <p>During this week, research was done to find what we would purchase for most of these components. They are shown below: </p>
+
+            <p><b>Microcontroller: </b><a href="https://www.adafruit.com/product/3405">Adafruit HUZZAH32 – ESP32 Feather Board</a> </p>
+
+            <div class="center-img">
+                <img style="width: 30%" src="./mc.png" alt="">
+            </div>
+
+            <p><b>Piezoelectric Sensor: </b><a href="https://www.adafruit.com/product/1740">Small Enclosed Piezo w/Wires</a> </p>
+
+            <div class="center-img">
+                <img style="width: 30%" src="./piezo.png" alt="">
+            </div>
+            <p><b>Power Source: </b><a href="https://www.adafruit.com/product/2750">Lithium Ion Polymer Battery - 3.7V 350mAh</a> </p>
+
+            <div class="center-img">
+                <img style="width: 30%" src="./power_source.png" alt="">
+            </div>
+        </p>
+        </article>
+
+        <hr>
+
+        <article class="glow-border">
+            <h2>Week 6: Detailed Design</h2>
+            <i style="color: white; margin-right: 5px" class="fas fa-calendar"></i>
+            <time datetime="2023-09-11">Oct 16-22, 2023</time>
+            <p>The first phase was figuring what components were needed. These components ended up being: Finger Sleeves, a Microcontroller, a Microcontroller mount, Different sensors (touch sensors), and a Power Source. </p>
+
+            <p>  <b>Finger sleeves:</b> research was done to figure out the ideal sizing and dimension for the sleeves as well as what fabric or material would be ideal. </p>
+                
+                <p>  <b>Microcontroller: </b> During this week numerous Microcontrollers were investigated based on how well they met our project constraints and criteria with the main factors being size (since this is a weable), number of IO pins, and power consumption.  </p>
+                
+                    <p>     <b>The Microcontroller Mount: </b>during this phase, the mount itself was not designed, but was just decided to be a component of our device. More specifically, it was decided to be a wrist mount to help keep the ROM of users at a maximum.  </p>
+                
+                        <p>  <b> Different Sensors: </b> Analysis was done on different touch sensors that would be useful for this device. The touch sensor that was chosen was the piezoelectric touch sensor. </p>
+                
+                            <p>  <b> Power Source:</b> Until the controller was chosen along with the different sensors, this component could not be decided on yet. </p>
+                 </p>
+        </article>
+
+        <hr>
+
+        <article class="glow-border">
+            <h2>Week 5: Preliminary Design Report</h2>
+            <i style="color: white; margin-right: 5px" class="fas fa-calendar"></i>
+            <time datetime="2023-09-11">Oct 9-15, 2023</time>
+            <p>This week our team focused on our very first formal presentation of the term. We worked on creating
+                a presentation that convered what we had been working on our first four weeks of the term. 
+
+                We split up the various sections of the presentation to do based on our specific lead roles. 
+                Our presentation had to cover all the areas we had worked on including the problem statement, specification, alternate designs, patent searching, selection process and project timeline.
+                We finished the presentation at the end of the week and handed it in first thing October 16th morning.
+            </p>
+        </article>
+
+        <hr>
+
+        <article class="glow-border">
+            <h2>Week 4: Conceptual Designs, Patent Search and Design Selection</h2>
+            <i style="color: white; margin-right: 5px" class="fas fa-calendar"></i>
+            <time datetime="2023-09-11">Oct 2-8, 2023</time>
+            <p>This week our team focused on coming up with conceptual designs. We came up with four designs and they are shown
+                in the figure below
+            </p>
+            <ul>
+                <li>Design 1: A flat pad that has pressure sensors layed out in the shape of a hand, where each pressure sensor 
+                        lines up with the tips of your fingers. The device records various pieces of information including if its
+                         pressed, and the duration, which can be converted into various musical concepts like key and rhythm using 
+                         our software</li>
+                <li>Design 2: A similar approach to design #1, except that it is shaped like a computer
+                     mouse, which leaves your hand in a ball shape, which feels more normal and ergonomic</li>
+                <li>Design 3: This design consists of sleeves that are worn over each finger. The sleeves have 
+                    touch sensitive pads as well, allowing the user to assume whatever position they feel most 
+                        comfortable in when using the device.</li>
+                <li>Design 4: Use VR or AR to detect finger movements and map those to inputs</li>
+            </ul>
+
+
+            <div class="center-img">
+                <img style="width: 50%" src="./conceptual_designs.png" alt="">
+            </div>
+
+            <p>The software component was similar across all designs, and would look something as follows:
+            </p>
+
+            <div class="center-img">
+                <img src="./software_1.png" alt="">
+            </div>
+
+
+            <p>To help us choose which design was best, a design selection criteria table was assembled. This table
+                contained a list of all the relevant criteria and constraints to the designs that could be compared against each design.
+                This table is shown below:
+            </p>
+
+            <div class="center-img">
+                <img style="width: 50%" src="./design_selection_criteria.png" alt="">
+            </div>
+            
+            <p>Patent searches were also conducted this week, to verify that the designs could be produced, while researching patentability.
+               3 patents were analyzed that were similar in nature to our problem, and their merits and demerits were compliled.
+            </p>
+
+            <p>To help us decide on a specific design, we made a decision matrix comparing the designs against each other
+                with respect to the criteria and constraints. This is shown below: </p>
+
+                <div class="center-img">
+                    <img style="width: 50%" src="./design_selection_matrix.png" alt="">
+                </div>
+        </article>
+
+        <hr>
+
+        <article class="glow-border">
+            <h2>Week 3: Objectives, Goals, Criteria, Constraints</h2>
+            <i style="color: white; margin-right: 5px" class="fas fa-calendar"></i>
+            <time datetime="2023-09-11">Sep 25-Oct 1, 2023</time>
+            <p>In week 3, our team focused on clearly defining our goals and objectives for the problem. 
+                After interpreting all the data we gathered, we came up with the following goal:
+            </p>
+            <p>"Design a cheap, ergonomic, and interactive solution for music 
+                students to practice their musical rhythm/tempo while obtaining objective feedback.                 
+                The solution should include a physical device capable of tracking hand/finger movements, 
+                analyzing the rhythm/tempo with respect to the input, and returning the objective feedback via software interface."</p>
+
+                <p>From the goal, we designed the following criteria and Constraints:</p>
+                <div class="center-img">
+                <img style="width: 60%" src="./criteria_and_constraints.png" alt="">
+                </div>
+        </article>
+
+        <hr>
+
+        <article class="glow-border">
+            <h2>Week 2: User Surveys & Data Collection </h2>
+            <i style="color: white; margin-right: 5px" class="fas fa-calendar"></i>
+            <time datetime="2023-09-11">Sep 18-24, 2023</time>
+            <p>In the second week, our team focused on gathering data and asking questions to better focus on the need.
+                We interview music professors, students, and friends asking them various questions relating to learning rhythm.</p>
+            <p>Some of the responses included:</p>
+            <ul>
+                <li>Having an objective form of feedback would be great for learning different rhythms</li>
+                <li>Could be used in classrooms as a visual aid to learning rhythm and a more interactive approach</li>
+                <li>Could have use cases for converting gestures into music</li>
+                <li>Could have use cases as a more ergonomic way to generate MIDI patterns.</li>
+            </ul>
+            <p>After interviewing a few professors who teach topics ranging from music interpretation to music theory, 
+                it is clear that a device like this is not currently used in classrooms, and that it would accelerate 
+                learning and improvement.</p>
+        </article>
+
+        <hr>
+        
+        <article class="glow-border" style="margin-bottom: 30px;">
+            <h2>Week 1: Problem Formulation</h2>
+            <i style="color: white; margin-right: 5px" class="fas fa-calendar"></i>
+            <time datetime="2023-09-11">Sep 11-17, 2023</time>
+            <p>During the first week, our team was focused on honing in on a specific problem and ensuring there was a problem to solve.
+               We initially had multiple potential ideas, but through meeting with professors, we were able to hone in and choose one.
+               Through our initial research and experience, we found that there was area for improvement in teaching students rhythm. 
+                We researched the problem more, and ultimately came up with the following problem:
+            </p>
+
+            <p>
+                "There is a need for a cheaper, more ergonomic, and interactive solution for music students to learn rhythm/tempo that includes
+                 a form of objective feedback. ​Currently, most of the learning feedback relies on the music instructor's own judgment for 
+                determining if they are correct".
+             </p>
+
+             <p>
+                During the problem formulation's intial states, our group had some issues focusing specifically on the need and target audience,
+                and this was to be addressed in the following week. 
+             </p>
+
+             <div class="center-img">
+                <img style="width: 60%" src="./rhythm_training.jpg" alt="">
+                </div>
+        </article>
+    </div>
+</body>
+</html>
